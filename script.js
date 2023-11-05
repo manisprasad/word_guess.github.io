@@ -126,23 +126,24 @@ start.addEventListener("click", () => {
 
 
 
-setInterval(() => {
+let t = setInterval(() => {
     let verify_character = document.querySelectorAll(".text1");
     let text_verify = "";
     verify_character.forEach((charac) => {
         text_verify += charac.value;
     });
-    if (text_verify == word) {
+    if (text_verify === word) {
         non_ava.style.transform = "scale(1)";
         non_ava.innerHTML = `<h1>${word}</h1>`;
         non_ava.style.textTransform = "uppercase";
         non_ava.style.color = "green";
-        // non_ava.style.boxShadow = "2px 2px 43px black"
-       
+
+
         non_ava.style.fontSize = "34px"
         // non_ava.style.padding = "10px"
         // non_ava.style.borderRadius = "23px"
         hint.style.display = "none";
+        clearInterval(t);
     } else {
         console.log(false);
     }
