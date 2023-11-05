@@ -86,17 +86,17 @@ start.addEventListener("click", () => {
         input.setAttribute("maxlength", "1");
         input_field.appendChild(input);
 
-        if (window.matchMedia("(max-width: 500px)").matches) {
-            const text1Elements = document.querySelectorAll(".text1");
-            text1Elements.forEach((element) => {
-                // Apply specific styles for screens less than 500px
-                element.style.fontSize = "21px";
-                element.style.width = "30px";
-                element.style.padding = "2px";
-                element.style.border = "2px solid black";
-                element.color = "purple"
-            });
-        }
+        // if (window.matchMedia("(max-width: 500px)").matches) {
+        //     const text1Elements = document.querySelectorAll(".text1");
+        //     text1Elements.forEach((element) => {
+        //         // Apply specific styles for screens less than 500px
+        //         element.style.fontSize = "21px";
+        //         element.style.width = "30px";
+        //         element.style.padding = "2px";
+        //         element.style.border = "2px solid black";
+        //         element.color = "purple"
+        //     });
+        // }
 
 
 
