@@ -138,7 +138,7 @@ setInterval(() => {
         non_ava.style.textTransform = "uppercase";
         non_ava.style.color = "green";
         // non_ava.style.boxShadow = "2px 2px 43px black"
-        non_ava.style.textShadow = "2px 2px 4px black"
+       
         non_ava.style.fontSize = "34px"
         // non_ava.style.padding = "10px"
         // non_ava.style.borderRadius = "23px"
