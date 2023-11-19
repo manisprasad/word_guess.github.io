@@ -1,148 +1,310 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
-    padding: 0;
+* {
     margin: 0;
-}
-body{
-    background-color: pink;
-    font-family: 'poppins';
-    background-size: cover;
-    background-repeat: no-repeat;
-    /*background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');*/
-    /*background-image: url("https://th.bing.com/th/id/OIP.13YkNno2dQ7qZOaiUwDargHaEK?pid=ImgDet&rs=1");*/
-    /*background-image: url("https://1.bp.blogspot.com/-swKkP6bVv-M/Ut_RpRJRiuI/AAAAAAAABD0/z5FRfPso6YA/s1600/ComputerDesktopWallpapersCollection760_089.jpg");*/
-    background-image: url("https://th.bing.com/th/id/OIP.hU91ctToquCDv-e9567urwHaHa?pid=ImgDet&w=626&h=626&rs=1");
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media screen and (max-width: 500px) {
-
-    body{
-        background-color: pink;
-    }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Changed "align-content" to "align-items" */
-    width: 100vw;
-    min-height: 400px;
-    max-height: 500px;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 5%;
-    row-gap: 16px;
-    border-radius: 12px;
-    transition: 1s;
-}
-
-.heading{
-    /*border: 2px solid black;*/
-    font-size: larger;
-    text-align: center;
-    margin-bottom: 14px;
-}
-.heading h1{
-    border: 2px solid black;
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 7px;
-    padding-right: 7px;
-    border-left: 10px groove purple;
-}
-
-.input-field{
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 12px;
+    position: fixed;
+    top: 0px;
+    z-index: 12;
+    border-bottom: 4px dashed rgba(38, 41, 38, 0.993);
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.568);
 
+ 
 }
-.start-game{
 
-    width: max-content;
-    height: max-content;
+nav div {
+    /* border: 2px solid black; */
+    font-size: larger;
+    text-align: center;
+}
 
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    font-family: 'poppins';
-    font-weight: bold;
-    border-radius: 12px;
-    padding: 17px;
-    font-size: 34px;
-    margin-top: 16px;
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: rgb(238,174,202);
+background: -moz-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1);
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90vw;
+    text-align: center; /* Center the content within the container */
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    row-gap: 13px;
+    align-content: center;
+    flex-direction: column;
+
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7px);
+-webkit-backdrop-filter: blur(7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.text1{
-    text-transform: uppercase;
-    font-family: 'poppins';
-    font-weight: bolder;
+
+.input-area {
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px;
+    width: 70%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center; /* Center the input-box horizontally */
+}
+
+.input-box {
+    display: flex;
+    padding: 10px;
+    /* border: 2px solid black; */
+}
+
+.char {
+    font-family: "Poppins", sans-serif;
     font-size: 23px;
+    /* padding: 20px; */
     text-align: center;
-    color: white;
-    background-color: black;
+    font-weight: 700;
     width: 50px;
-    height: max-content;
-    border-radius: 16px;
-    padding: 15px;
-}
-.text1:hover{
-    box-shadow: red 5px 2px 2px;
-}
-.non-available-word {
-     display: flex;
-     justify-content: center;
-     flex-wrap: wrap;
-     align-items: center;
-     column-gap: 12px;
-     transition: transform 1s; /* Use transform property for scaling */
-
- }
-
-
-
-.unwanted{
-    height: 40px;
-    width: 50px;
-    text-align: center;
-    font-size: 33px;
-    background-color: yellow;
-    font-weight: bolder;
-    padding-bottom: 10px;
-    border: 2px solid black;
+    height: 50px;
+    color: black;
+    background-color: lightslategray;
     border-radius: 12px;
-
-
-
-}
-.non-title{
-    border: 2px solid black;
-    display: none;
-    text-align: center;
-    padding: 9px;
+    border: 2px solid green;
+    /* color: aqua; */
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7px);
+-webkit-backdrop-filter: blur(7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.hint-area{
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .char {
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        width: 30px; /* Adjust the width for smaller screens */
+        gap: 2px;
+        height: 30px;
+    }
+
+    .input-area {
+        width: 90%; /* Adjust the width for smaller screens */
+        padding-top: 10px;
+    }
+    .input-box{
+        padding: 1px;
+    }
+}
+.inputAlpha{
+    width: 60%;
+    margin: 0 auto;
+    height: 30%;
+    color: blueviolet;
+   
+
+}
+
+.inputAplha div {
+    /* Add styles for the generated div elements if needed */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    color: black;
+    background: #430b9ea2;
+    font-size: 28px;
+    padding-top: 5px;
+    font-weight: 700;
+    margin: 2px;
+    text-align: center;
     border-radius: 12px;
-    transition: 0.4s;
-    scale: 1;
+    line-height: 30px;
+    cursor: pointer;
 }
-.non-title:hover{
-    scale: 0.6;
+.inputAplha div:active{
+   scale: 0.6;
 }
+
+.popup{
+    width: 100%;
+    position: absolute;
+    top: 9%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(233, 12, 222);
+    /* font-size: 21px; */
+    transition: 0.5s ease-in;
+
+}
+
+/* resulkt */
+.result {
+    scale: 0;
+    width: 70%;
+    /* max-width: 50%; */
+    min-width: 50%;
+    height: max-content;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12px;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    color: purple;
+    transform: translate(-50%, -50%); /* Corrected syntax here */
+   
+    transition: 0.3s ease-in;
+}
+
+
+.won{
+    /* border: 2px solid black; */
+    /* width: max-content; */
+    text-align:center;
+    font-weight: 800;
+    font-size: 34px;
+}
+.won-image{
+    /* border: 2px solid black; */
+    width: 80px;
+    filter: brightness(110%);
+}
+
+.next-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    /* margin-bottom: 30px; */
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    background-color: rebeccapurple; /* Green background color */
+    font-size: 23px;
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for background color */
+    font-family: "poppins";
+
+}
+
+.next-btn:hover {
+    background-color: rgb(9, 201, 9); /* Darker green on hover */
+    border: 2px solid black;
+    scale: 1.2;
+    color: black;
+}
+.next-btn:active{
+    scale: 0.7;
+}
+
+main{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f00; /* Red confetti, you can customize the color */
+    border-radius: 50%;
+    animation: fall 2s ease-out 1;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(10vh);
+    }
+   100%{
+        transform: translateY(100vh);
+    }
+}
+
+.ballon1 {
+    scale: 0;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 100px;
+    transition: 0.3 ease;
+}
+
+.ballon2 {
+    scale: 0;
+    position: absolute;
+    right: 10px;
+    width: 100px;
+    bottom: 10px;
+    transition: 0.3 ease;
+    
+}
+
+@keyframes ballonAnim {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
 

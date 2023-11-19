@@ -1,34 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Word_Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-<header></header>
-<main>
-    <div class="container">
-        <div class="heading"><h1>Make Word</h1></div>
-        <div class="main-content">
-            <div class="input-field">
+    <nav>
+        <div><h1>Missing Word</h1></div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="input-area"></div>
+  
+            <div class="hint-area"></div>
 
+            <div class="inputAplha">
+             
+                <div class="score" style="position: absolute; top: -10px; right: 9px; color: brown; background: transparent; width: max-content; font-size: 17px;border-color: transparent;"></div>
             </div>
-
         </div>
-        <button type="submit" class="start-game">Start</button>
+    </main>
+
+<div class="result">
+    <div class="won">You're Correct</div>
+    <div class="won-image-container"><img class="won-image" src="/images/correct.png" alt=""></div>
+    <button class="next-btn" type="submit">Next Lvl</button>
+</div>
+<div id="confetti-container"></div>
+
+ <img class="ballon1"  src="/images/ballon.png" alt="" srcset="">
+<img class="ballon2" src="/images/ballon.png" alt="" srcset="">
 
 
-        <div class="non-title"><h2> Use below word</h2></div>
-        <div class="non-available-word">
+<div class="popup">
 
-        </div>
-
-    </div>
-</main>
-<script src="script.js"></script>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
