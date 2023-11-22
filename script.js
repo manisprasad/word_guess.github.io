@@ -168,7 +168,7 @@ function handleCorrectInput() {
         finalWord += ele.value;
     });
 
-    if (finalWord === currentWord) {
+    if (finalWord.toUpperCase() === currentWord.toUpperCase()) {
         console.log("Correct!");
         point++;
         score.textContent = `Total solved: ${point}`;
